@@ -34,9 +34,9 @@
 		/>
 
 	<xsl:template match="/">
-		<xsl:call-template name="generate-UE"/>
+		<xsl:apply-templates select="//UE"/>
 		<xsl:apply-templates select="//enseignant"/>
-		<xsl:call-template name="generate-parcours"/>
+		<xsl:apply-templates select="//parcours"/>
 		<xsl:call-template name="pages-site">
 			<xsl:with-param name="page-name">unites</xsl:with-param>
 		</xsl:call-template>
@@ -101,7 +101,7 @@
 			</xsl:call-template>
 		</ul>
 	</xsl:template>
-
+<!--
 	<xsl:template match="//UE">
 		<xsl:call-template name="fiches_UE">
 			<xsl:with-param name="idUE">
@@ -109,7 +109,7 @@
 			</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
-
+-->
 	<xsl:template match="//UE" mode="ref">
 		<ul>
 			<xsl:call-template name="liste_UE">

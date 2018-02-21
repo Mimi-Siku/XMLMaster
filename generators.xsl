@@ -13,7 +13,7 @@
   />
 
 
-  	<xsl:template name="generate-UE">
+  	<xsl:template match="//UE">
   		<xsl:for-each select="//UE">
   			<xsl:document href="{@id}.html" method="xml" indent="yes" xml-declaration="no" encoding="iso-8859-1">
   				<xsl:call-template name="fiches_UE">
@@ -37,7 +37,7 @@
   		</xsl:for-each>
   	</xsl:template>
 
-  		<xsl:template name="generate-parcours">
+  		<xsl:template match="//parcours">
   			<xsl:for-each select="//parcours">
   				<xsl:document href="{@id}.html" method="xml" indent="yes" xml-declaration="no" encoding="iso-8859-1">
   					<xsl:call-template name="fiches_parcours">
