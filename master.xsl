@@ -2,7 +2,8 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
-	<xsl:include href="generators.xsl"/>
+	<xsl:include href="modeRef.xsl"/>
+	<xsl:include href="modeSimple.xsl"/>
 	<xsl:include href="fiches.xsl"/>
 
 	<xsl:output
@@ -80,57 +81,5 @@
 			<li><a href="intervenants.html">Intervenants</a></li>
 		</ul>
 	</xsl:template>
-
-
-
-<!--
-	<xsl:template match="//enseignant">
-		<xsl:call-template name="fiches_enseignants">
-			<xsl:with-param name="idEns">
-				<xsl:value-of select="@id"/>
-			</xsl:with-param>
-		</xsl:call-template>
-	</xsl:template>
--->
-	<xsl:template match="//enseignant" mode="ref">
-		<ul>
-			<xsl:call-template name="liste_enseignants">
-				<xsl:with-param name="href">
-					<xsl:value-of select="@id"/>
-				</xsl:with-param>
-			</xsl:call-template>
-		</ul>
-	</xsl:template>
-<!--
-	<xsl:template match="//UE">
-		<xsl:call-template name="fiches_UE">
-			<xsl:with-param name="idUE">
-				<xsl:value-of select="@id"/>
-			</xsl:with-param>
-		</xsl:call-template>
-	</xsl:template>
--->
-	<xsl:template match="//UE" mode="ref">
-		<ul>
-			<xsl:call-template name="liste_UE">
-				<xsl:with-param name="href">
-					<xsl:value-of select="@id"/>
-				</xsl:with-param>
-			</xsl:call-template>
-		</ul>
-	</xsl:template>
-
-	<xsl:template name="liste_enseignants">
-		<xsl:param name="href"/>
-		<li><a href="{$href}.html"><xsl:value-of select="nom"/></a></li>
-	</xsl:template>
-
-	<xsl:template name="liste_UE">
-		<xsl:param name="href"/>
-		<li><a href="{$href}.html"><xsl:value-of select="nom"/></a></li>
-	</xsl:template>
-
-
-<!--eviter les call template, faire plutot des apply template avec mode-->
 
 </xsl:stylesheet>
