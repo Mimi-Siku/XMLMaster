@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE master SYSTEM "master.dtd">
+
+<master>
+
+	<enseignant id="ENS-0">
+		<nom>Roland AGOPIAN</nom>
+		<adrElec>roland.agopian@univ-amu.fr</adrElec>
+		<adrSite>Luminy</adrSite>
+	</enseignant>
+	<enseignant id="ENS-1">
+		<nom>Thierry ARTIÈRES</nom>
+		<adrElec>thierry.artieres@lif.univ-mrs.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-2">
+		<nom>Frederic BECHET</nom>
+		<adrElec>frederic.bechet@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-3">
+		<nom>Clara BERTOLISSI</nom>
+		<adrElec>clara.bertolissi@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-4">
+		<nom>Omar BOUCELMA</nom>
+		<adrElec>omar.boucelma@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-5">
+		<nom>Martine BROCHE</nom>
+		<adrElec>martine.broche@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-6">
+		<nom>Nadia CREIGNOU</nom>
+		<adrElec>nadia.creignou@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-7">
+		<nom>Rémi MORIN</nom>
+		<adrElec>remi.morin@univ-amu.fr@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-8">
+		<nom>Jean-Luc MASSAT</nom>
+		<adrElec>jean-luc.massat@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+	<enseignant id="ENS-9">
+		<nom>Emmanuel GODARD</nom>
+		<adrElec>emmanuel.godard@univ-amu.fr</adrElec>
+		<adrSite>Saint-Jérôme</adrSite>
+	</enseignant>
+
+
+  <UE id="UE-0">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Génie Logiciel</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Luminy</lieu>
+  </UE>
+
+  <UE id="UE-1">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Complexité</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-2">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Réseaux</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-3">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Programmation fonctionnelle</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-4">
+		<ref-responsable ref="ENS-1"/>
+    <nom>BDR : approfondissement</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-5">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Programmation logique</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-6">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Outils de l'internet</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-7">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Système embarqué</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-8">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Fondamentaux pour l'ingénierie des langues</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-9">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Modèles à évènements discrets</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-10">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Pratique de la cryptographie</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-11">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Anglais</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-12">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Communication</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-13">
+		<ref-responsable ref="ENS-1"/>
+    <nom>XML</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-14">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Algorithmique et recherche opérationnelle</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-15">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Programmation parallèle</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-16">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Projet</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-17">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Stage de deux mois</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-18">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Sémantique</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-19">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Algorithmique distribuée</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-20">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Intégration des systèmes d'informations</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-21">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Initiation à la fouille de données et à l'optimisation des SGBD</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-22">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Intelligence artificielle</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-23">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Algorithme à performance garantie</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-24">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Introduction à l'apprentissage automatique</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-25">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Anglais 2</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-26">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Communication 2</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-27">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Sécurité internet et réseau</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-28">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Fiabilité logicielle</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-29">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Administration système et réseau</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-30">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Méthodes de développement</nom>
+    <nbCredits>3</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-31">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Projet industriel de mise en application</nom>
+    <nbCredits>6</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <UE id="UE-32">
+		<ref-responsable ref="ENS-1"/>
+    <nom>Stage en entreprise</nom>
+    <nbCredits>24</nbCredits>
+    <resume>
+      <![CDATA[
+        Processus logiciel
+        Gestion de projet
+        Spécification et conception (artefact : notation UML)
+        Design patterns
+      ]]>
+    </resume>
+    <plan>20h/20h/20h</plan>
+    <lieu>Saint-Jérôme</lieu>
+  </UE>
+
+  <master1>
+    <ref-responsable ref="ENS-7"/>
+    <nom>Première année de tronc commun</nom>
+    <description>
+      <![CDATA[
+        La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
+         Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
+         de test et de suivi de logiciels, avec des méthodologies normalisées.
+          Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
+          (Web-services, protocoles de communication et cryptographiques,..)
+          et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
+      ]]>
+    </description>
+    <semestre>
+      <bloc>
+        <role>Obligatoires</role>
+        <ref-UE ref="UE-0"/>
+        <ref-UE ref="UE-1"/>
+        <ref-UE ref="UE-2"/>
+        <ref-UE ref="UE-3"/>
+        <ref-UE ref="UE-4"/>
+      </bloc>
+      <bloc>
+        <role>Options</role>
+        <ref-UE ref="UE-5"/>
+        <ref-UE ref="UE-6"/>
+        <ref-UE ref="UE-7"/>
+        <ref-UE ref="UE-8"/>
+        <ref-UE ref="UE-9"/>
+        <ref-UE ref="UE-10"/>
+      </bloc>
+    </semestre>
+    <semestre>
+      <bloc>
+        <role>Obligatoire</role>
+        <ref-UE ref="UE-11"/>
+        <ref-UE ref="UE-12"/>
+        <ref-UE ref="UE-13"/>
+        <ref-UE ref="UE-14"/>
+        <ref-UE ref="UE-15"/>
+      </bloc>
+      <bloc>
+        <role>Projet de fin d'année</role>
+        <ref-UE ref="UE-16"/>
+        <ref-UE ref="UE-17"/>
+      </bloc>
+      <bloc>
+        <role>Obligatoire</role>
+        <ref-UE ref="UE-18"/>
+        <ref-UE ref="UE-19"/>
+        <ref-UE ref="UE-20"/>
+        <ref-UE ref="UE-21"/>
+        <ref-UE ref="UE-22"/>
+        <ref-UE ref="UE-23"/>
+        <ref-UE ref="UE-24"/>
+      </bloc>
+    </semestre>
+  </master1>
+
+  <master2>
+    <parcours id="PARC-0">
+      <ref-responsable ref="ENS-9"/>
+      <nom>Fiabilité et sécurité informatique (FSI)</nom>
+      <description>
+        <![CDATA[
+        La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
+         Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
+         de test et de suivi de logiciels, avec des méthodologies normalisées.
+          Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
+          (Web-services, protocoles de communication et cryptographiques,..)
+          et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
+      ]]>
+      </description>
+      <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
+      <semestre>
+        <bloc>
+          <role>Tronc commun FSI et ISL</role>
+          <ref-UE ref="UE-25"/>
+          <ref-UE ref="UE-26"/>
+        </bloc>
+        <bloc>
+          <role>Obligatoires</role>
+          <ref-UE ref="UE-27"/>
+          <ref-UE ref="UE-28"/>
+        </bloc>
+      </semestre>
+      <semestre>
+        <bloc>
+          <role>Obligatoire</role>
+          <ref-UE ref="UE-31"/>
+          <ref-UE ref="UE-32"/>
+        </bloc>
+      </semestre>
+    </parcours>
+    <parcours id="PARC-1">
+      <ref-responsable ref="ENS-8"/>
+      <nom>Intégration de systèmes logiciels (ISL)</nom>
+      <description>
+        <![CDATA[
+        La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
+         Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
+         de test et de suivi de logiciels, avec des méthodologies normalisées.
+          Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
+          (Web-services, protocoles de communication et cryptographiques,..)
+          et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
+      ]]>
+      </description>
+      <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
+      <semestre>
+        <bloc>
+          <role>Tronc commun FSI et ISL</role>
+          <ref-UE ref="UE-25"/>
+          <ref-UE ref="UE-26"/>
+        </bloc>
+        <bloc>
+          <role>Obligatoires</role>
+          <ref-UE ref="UE-29"/>
+          <ref-UE ref="UE-30"/>
+        </bloc>
+      </semestre>
+      <semestre>
+        <bloc>
+          <role>Obligatoire</role>
+          <ref-UE ref="UE-31"/>
+          <ref-UE ref="UE-32"/>
+        </bloc>
+      </semestre>
+    </parcours>
+  </master2>
+
+</master>

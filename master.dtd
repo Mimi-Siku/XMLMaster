@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!ELEMENT master (enseignant+, UE+, master1, master2)>
+<!ELEMENT enseignant (nom, adrElec, adrSite)>
+<!ELEMENT UE (ref-responsable, nom, nbCredits, resume, plan, lieu)>
+<!ELEMENT master1 (ref-responsable, nom, description, semestre+)>
+<!ELEMENT master2 (parcours+)>
+<!ELEMENT parcours (ref-responsable, nom, description, debouches, semestre+)>
+<!ELEMENT semestre (bloc+)>
+<!ELEMENT bloc (role, ref-UE+)>
+
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT nbCredits (#PCDATA)>
+<!ELEMENT resume (#PCDATA)>
+<!ELEMENT plan (#PCDATA)>
+<!ELEMENT lieu (#PCDATA)>
+<!ELEMENT adrElec (#PCDATA)>
+<!ELEMENT adrSite (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT debouches (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+
+<!ELEMENT ref-UE (#PCDATA)>
+<!ATTLIST ref-UE
+	ref IDREF #REQUIRED
+	>
+<!ELEMENT ref-responsable (#PCDATA)>
+<!ATTLIST ref-responsable
+	ref IDREF #REQUIRED
+	>
+
+<!ATTLIST enseignant
+	id ID #IMPLIED
+	>
+<!ATTLIST UE
+	id ID #IMPLIED
+	>
+<!ATTLIST parcours
+	id ID #IMPLIED
+	>
