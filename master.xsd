@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<!-- Elements de type complexe -->
+	<xs:element name="master" type="master"/>
+	<xs:element name="objet" type="objet" abstract="true"/>
+	<xs:element name="enseignant" type="enseignant" substitutionGroup="objet"/>
+	<xs:element name="UE" type="UE" substitutionGroup="objet"/>
+	<xs:element name="parcours" type="parcours" substitutionGroup="objet"/>
+	<xs:element name="semestre" type="semestre"/>
+	<xs:element name="bloc" type="bloc"/>
+	
+	<xs:complexType name="master">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="objet" />
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="objet" />
+			<xs:element ref="master1" />
+			<xs:element ref="master2" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="master1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ref-responsable" />
+				<xs:element ref="nom" />
+				<xs:element ref="description" />
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="semestre" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="master2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element minOccurs="1" maxOccurs="unbounded" ref="parcours" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+
+
+
+	
+	<!-- Eléments de type simple -->
+	<xs:element name="nom" type="xs:string" />
+	<xs:element name="id" type="xs:string" />
+	<xs:element name="nbCredits" type="xs:string" />
+	<xs:element name="resume" type="xs:string" />
+	<xs:element name="plan" type="xs:string" />
+	<xs:element name="lieu" type="xs:string" />
+	<xs:element name="adrElec" type="xs:string" />
+	<xs:element name="adrSite" type="xs:string" />
+	<xs:element name="description" type="xs:string" />
+	<xs:element name="debouches" type="xs:string" />
+	<xs:element name="role" type="xs:string" />
+	<xs:element name="autres" type="xs:string" />
+
+	<!-- Eléments de références -->
+	<xs:element name="ref-UE">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="ref" type="xs:IDREF" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="ref-responsable">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="ref" type="xs:IDREF" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- Définition des types UE et UE luminy et UE saint jerome-->
+
+	<xs:complexType name="UEluminy">
+		<xs:complexContent>
+			<xs:restriction base="UE">
+				<xs:sequence>
+					<xs:element ref="ref-responsable" />
+					<xs:element ref="nom" />
+					<xs:element ref="nbCredits" />
+					<xs:element ref="resume" />
+					<xs:element ref="plan" />
+					<xs:element name="lieu" type="xs:string" fixed="Luminy"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="UEstjerome">
+		<xs:complexContent>
+			<xs:restriction base="UE">
+				<xs:sequence>
+					<xs:element ref="ref-responsable" />
+					<xs:element ref="nom" />
+					<xs:element ref="nbCredits" />
+					<xs:element ref="resume" />
+					<xs:element ref="plan" />
+					<xs:element name="lieu" type="xs:string" fixed="Saint-Jérôme"/>
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+<!-- Extension du type enseignant (inutilisé) -->
+	<xs:complexType name="personne">
+		<xs:complexContent>
+			<xs:extension base="enseignant">
+				<xs:sequence>
+					<xs:element name="adresse" type="xs:string"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- Main complex types -->
+	<xs:complexType name="objet">
+		<xs:sequence>
+			<xs:element ref="nom"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+	</xs:complexType>
+	
+	<xs:complexType name="enseignant">
+		<xs:complexContent>
+			<xs:extension base="objet">
+				<xs:sequence>
+					<xs:element ref="nom" />
+					<xs:element ref="adrElec" />
+					<xs:element ref="adrSite" />
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="UE">
+		<xs:complexContent>
+			<xs:extension base="objet">
+				<xs:sequence>
+					<xs:element ref="ref-responsable" />
+					<xs:element ref="nom" />
+					<xs:element ref="nbCredits" />
+					<xs:element ref="resume" />
+					<xs:element ref="plan" />
+					<xs:element ref="lieu" />
+					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="parcours">
+		<xs:complexContent>
+			<xs:extension base="objet">
+				<xs:sequence>
+					<xs:element ref="ref-responsable" />
+					<xs:element ref="nom" />
+					<xs:element ref="description" />
+					<xs:element ref="debouches" />
+					<xs:element minOccurs="1" maxOccurs="unbounded" ref="semestre" />
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+		<xs:complexType name="semestre">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="bloc" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="bloc">
+		<xs:sequence>
+			<xs:element ref="role" />
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="ref-UE" />
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

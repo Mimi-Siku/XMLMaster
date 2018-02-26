@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE master SYSTEM "master.dtd">
 
-<master>
+<master
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="master.xsd"
+		>
 
 	<enseignant id="ENS-0">
 		<nom>Roland AGOPIAN</nom>
@@ -583,7 +586,7 @@
     <lieu>Saint-Jérôme</lieu>
   </UE>
 
-  <master1>
+  <parcours id="PARC-0">
     <ref-responsable ref="ENS-7"/>
     <nom>Première année de tronc commun</nom>
     <description>
@@ -640,77 +643,76 @@
         <ref-UE ref="UE-24"/>
       </bloc>
     </semestre>
-  </master1>
+  </parcours>
 
-  <master2>
-    <parcours id="PARC-0">
-      <ref-responsable ref="ENS-9"/>
-      <nom>Fiabilité et sécurité informatique (FSI)</nom>
-      <description>
-        <![CDATA[
-        La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
-         Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
-         de test et de suivi de logiciels, avec des méthodologies normalisées.
-          Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
-          (Web-services, protocoles de communication et cryptographiques,..)
-          et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
-      ]]>
-      </description>
-      <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
-      <semestre>
-        <bloc>
-          <role>Tronc commun FSI et ISL</role>
-          <ref-UE ref="UE-25"/>
-          <ref-UE ref="UE-26"/>
-        </bloc>
-        <bloc>
-          <role>Obligatoires</role>
-          <ref-UE ref="UE-27"/>
-          <ref-UE ref="UE-28"/>
-        </bloc>
-      </semestre>
-      <semestre>
-        <bloc>
-          <role>Obligatoire</role>
-          <ref-UE ref="UE-31"/>
-          <ref-UE ref="UE-32"/>
-        </bloc>
-      </semestre>
-    </parcours>
-    <parcours id="PARC-1">
-      <ref-responsable ref="ENS-8"/>
-      <nom>Intégration de systèmes logiciels (ISL)</nom>
-      <description>
-        <![CDATA[
-        La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
-         Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
-         de test et de suivi de logiciels, avec des méthodologies normalisées.
-          Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
-          (Web-services, protocoles de communication et cryptographiques,..)
-          et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
-      ]]>
-      </description>
-      <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
-      <semestre>
-        <bloc>
-          <role>Tronc commun FSI et ISL</role>
-          <ref-UE ref="UE-25"/>
-          <ref-UE ref="UE-26"/>
-        </bloc>
-        <bloc>
-          <role>Obligatoires</role>
-          <ref-UE ref="UE-29"/>
-          <ref-UE ref="UE-30"/>
-        </bloc>
-      </semestre>
-      <semestre>
-        <bloc>
-          <role>Obligatoire</role>
-          <ref-UE ref="UE-31"/>
-          <ref-UE ref="UE-32"/>
-        </bloc>
-      </semestre>
-    </parcours>
-  </master2>
+  <parcours id="PARC-1">
+    <ref-responsable ref="ENS-9"/>
+    <nom>Fiabilité et sécurité informatique (FSI)</nom>
+    <description>
+      <![CDATA[
+      La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
+        Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
+        de test et de suivi de logiciels, avec des méthodologies normalisées.
+        Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
+        (Web-services, protocoles de communication et cryptographiques,..)
+        et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
+    ]]>
+    </description>
+    <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
+    <semestre>
+      <bloc>
+        <role>Tronc commun FSI et ISL</role>
+        <ref-UE ref="UE-25"/>
+        <ref-UE ref="UE-26"/>
+      </bloc>
+      <bloc>
+        <role>Obligatoires</role>
+        <ref-UE ref="UE-27"/>
+        <ref-UE ref="UE-28"/>
+      </bloc>
+    </semestre>
+    <semestre>
+      <bloc>
+        <role>Obligatoire</role>
+        <ref-UE ref="UE-31"/>
+        <ref-UE ref="UE-32"/>
+      </bloc>
+    </semestre>
+  </parcours>
+	
+  <parcours id="PARC-2">
+    <ref-responsable ref="ENS-8"/>
+    <nom>Intégration de systèmes logiciels (ISL)</nom>
+    <description>
+      <![CDATA[
+      La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
+        Elle forme les étudiants aux principes et méthodes de développement modernes qui reposent sur des outils de prototypage,
+        de test et de suivi de logiciels, avec des méthodologies normalisées.
+        Elle apporte des compétences fortes en sécurité informatique dans les domaines liés à l'échange d'information
+        (Web-services, protocoles de communication et cryptographiques,..)
+        et à la communication entre systèmes (réseaux hétérogènes et applications embarquées ou distribuées).
+    ]]>
+    </description>
+    <debouches>Tu peux devenir grand lapin de ce monde.</debouches>
+    <semestre>
+      <bloc>
+        <role>Tronc commun FSI et ISL</role>
+        <ref-UE ref="UE-25"/>
+        <ref-UE ref="UE-26"/>
+      </bloc>
+      <bloc>
+        <role>Obligatoires</role>
+        <ref-UE ref="UE-29"/>
+        <ref-UE ref="UE-30"/>
+      </bloc>
+    </semestre>
+    <semestre>
+      <bloc>
+        <role>Obligatoire</role>
+        <ref-UE ref="UE-31"/>
+        <ref-UE ref="UE-32"/>
+      </bloc>
+    </semestre>
+  </parcours>
 
 </master>

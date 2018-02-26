@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<!ELEMENT master (enseignant+, UE+, master1, master2)>
+<!ELEMENT master (enseignant+, UE+, parcours+)>
 <!ELEMENT enseignant (nom, adrElec, adrSite)>
 <!ELEMENT UE (ref-responsable, nom, nbCredits, resume, plan, lieu)>
-<!ELEMENT master1 (ref-responsable, nom, description, semestre+)>
-<!ELEMENT master2 (parcours+)>
-<!ELEMENT parcours (ref-responsable, nom, description, debouches, semestre+)>
+<!ELEMENT parcours (ref-responsable, nom, description, debouches?, semestre+)>
 <!ELEMENT semestre (bloc+)>
 <!ELEMENT bloc (role, ref-UE+)>
 
