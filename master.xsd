@@ -11,39 +11,6 @@
 	<xs:element name="semestre" type="semestre"/>
 	<xs:element name="bloc" type="bloc"/>
 	
-	<xs:complexType name="master">
-		<xs:sequence>
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="objet" />
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="objet" />
-			<xs:element ref="master1" />
-			<xs:element ref="master2" />
-		</xs:sequence>
-	</xs:complexType>
-	
-	<xs:element name="master1">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element ref="ref-responsable" />
-				<xs:element ref="nom" />
-				<xs:element ref="description" />
-				<xs:element minOccurs="1" maxOccurs="unbounded" ref="semestre" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	<xs:element name="master2">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element minOccurs="1" maxOccurs="unbounded" ref="parcours" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-	
-	
-
-
-
-	
 	<!-- Eléments de type simple -->
 	<xs:element name="nom" type="xs:string" />
 	<xs:element name="id" type="xs:string" />
@@ -57,7 +24,7 @@
 	<xs:element name="debouches" type="xs:string" />
 	<xs:element name="role" type="xs:string" />
 	<xs:element name="autres" type="xs:string" />
-
+	
 	<!-- Eléments de références -->
 	<xs:element name="ref-UE">
 		<xs:complexType>
@@ -68,7 +35,7 @@
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<xs:element name="ref-responsable">
 		<xs:complexType>
 			<xs:simpleContent>
@@ -80,10 +47,20 @@
 	</xs:element>
 	
 	<!-- Définition des types UE et UE luminy et UE saint jerome-->
-
+	<xs:complexType name="UE2">
+				<xs:sequence>
+					<xs:element ref="ref-responsable" />
+					<xs:element ref="nom" />
+					<xs:element ref="nbCredits" />
+					<xs:element ref="resume" />
+					<xs:element ref="plan" />
+					<xs:element ref="lieu" />
+					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="UEluminy">
 		<xs:complexContent>
-			<xs:restriction base="UE">
+			<xs:restriction base="UE2">
 				<xs:sequence>
 					<xs:element ref="ref-responsable" />
 					<xs:element ref="nom" />
@@ -136,12 +113,10 @@
 		<xs:complexContent>
 			<xs:extension base="objet">
 				<xs:sequence>
-					<xs:element ref="nom" />
 					<xs:element ref="adrElec" />
 					<xs:element ref="adrSite" />
-					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
-				<xs:attribute name="id" type="xs:ID" />
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -151,14 +126,12 @@
 			<xs:extension base="objet">
 				<xs:sequence>
 					<xs:element ref="ref-responsable" />
-					<xs:element ref="nom" />
 					<xs:element ref="nbCredits" />
 					<xs:element ref="resume" />
 					<xs:element ref="plan" />
 					<xs:element ref="lieu" />
-					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
+					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
-				<xs:attribute name="id" type="xs:ID" />
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -171,24 +144,36 @@
 					<xs:element ref="nom" />
 					<xs:element ref="description" />
 					<xs:element ref="debouches" />
-					<xs:element minOccurs="1" maxOccurs="unbounded" ref="semestre" />
+					<xs:element ref="semestre" minOccurs="1" maxOccurs="unbounded" />
 				</xs:sequence>
 				<xs:attribute name="id" type="xs:ID" />
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-		<xs:complexType name="semestre">
+	<xs:complexType name="semestre">
 		<xs:sequence>
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="bloc" />
+			<xs:element ref="bloc" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
 	<xs:complexType name="bloc">
 		<xs:sequence>
 			<xs:element ref="role" />
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="ref-UE" />
+			<xs:element ref="ref-UE" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-	
+
+<!-- Vrac pas nettoyé -->
+	<xs:complexType name="master">
+		<xs:sequence>
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="enseignant" />
+			<xs:choice>
+				<xs:element name="UE" minOccurs="1" maxOccurs="unbounded" type="UEluminy" />
+				<xs:element name="UE" minOccurs="1" maxOccurs="unbounded" type="UEjerome" />
+			</xs:choice>
+			<xs:element minOccurs="1" maxOccurs="unbounded" ref="parcours" />
+		</xs:sequence>
+	</xs:complexType>
+
 </xs:schema>
