@@ -59,8 +59,8 @@
 
 
   <UE id="UE-0">
-		<ref-responsable ref="ENS-1"/>
     <nom>Génie Logiciel</nom>
+		<ref-responsable ref="ENS-1"/>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -75,8 +75,8 @@
   </UE>
 
   <UE id="UE-1">
+		<nom>Complexité</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Complexité</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -91,8 +91,8 @@
   </UE>
 
   <UE id="UE-2">
+		<nom>Réseaux</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Réseaux</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -107,8 +107,8 @@
   </UE>
 
   <UE id="UE-3">
+		<nom>Programmation fonctionnelle</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Programmation fonctionnelle</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -123,8 +123,8 @@
   </UE>
 
   <UE id="UE-4">
+		<nom>BDR : approfondissement</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>BDR : approfondissement</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -139,8 +139,8 @@
   </UE>
 
   <UE id="UE-5">
+		<nom>Programmation logique</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Programmation logique</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -155,8 +155,8 @@
   </UE>
 
   <UE id="UE-6">
+		<nom>Outils de l'internet</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Outils de l'internet</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -171,8 +171,8 @@
   </UE>
 
   <UE id="UE-7">
+		<nom>Système embarqué</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Système embarqué</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -187,8 +187,8 @@
   </UE>
 
   <UE id="UE-8">
+		<nom>Système embarqué</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Fondamentaux pour l'ingénierie des langues</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -203,8 +203,8 @@
   </UE>
 
   <UE id="UE-9">
+		<nom>Modèles à évènements discrets</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Modèles à évènements discrets</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -219,8 +219,8 @@
   </UE>
 
   <UE id="UE-10">
+		<nom>Pratique de la cryptographie</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Pratique de la cryptographie</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -235,8 +235,8 @@
   </UE>
 
   <UE id="UE-11">
+		<nom>Anglais</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Anglais</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -251,8 +251,8 @@
   </UE>
 
   <UE id="UE-12">
+		<nom>Communication</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Communication</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -267,8 +267,8 @@
   </UE>
 
   <UE id="UE-13">
+		<nom>XML</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>XML</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -283,8 +283,8 @@
   </UE>
 
   <UE id="UE-14">
+		<nom>Algorithmique et recherche opérationnelle</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Algorithmique et recherche opérationnelle</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -299,8 +299,8 @@
   </UE>
 
   <UE id="UE-15">
+		<nom>Programmation parallèle</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Programmation parallèle</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -315,8 +315,8 @@
   </UE>
 
   <UE id="UE-16">
+		<nom>Projet</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Projet</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -331,8 +331,8 @@
   </UE>
 
   <UE id="UE-17">
+		<nom>Stage de deux mois</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Stage de deux mois</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -347,8 +347,8 @@
   </UE>
 
   <UE id="UE-18">
+		<nom>Sémantique</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Sémantique</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -363,8 +363,8 @@
   </UE>
 
   <UE id="UE-19">
+		<nom>Algorithmique distribuée</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Algorithmique distribuée</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -379,8 +379,8 @@
   </UE>
 
   <UE id="UE-20">
+		<nom>Intégration des systèmes d'informations</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Intégration des systèmes d'informations</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -395,8 +395,8 @@
   </UE>
 
   <UE id="UE-21">
+		<nom>Initiation à la fouille de données et à l'optimisation des SGBD</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Initiation à la fouille de données et à l'optimisation des SGBD</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -411,8 +411,8 @@
   </UE>
 
   <UE id="UE-22">
+		<nom>Intelligence artificielle</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Intelligence artificielle</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -427,8 +427,8 @@
   </UE>
 
   <UE id="UE-23">
+		<nom>Algorithme à performance garantie</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Algorithme à performance garantie</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -443,8 +443,8 @@
   </UE>
 
   <UE id="UE-24">
+		<nom>Introduction à l'apprentissage automatique</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Introduction à l'apprentissage automatique</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -459,8 +459,8 @@
   </UE>
 
   <UE id="UE-25">
+		<nom>Anglais 2</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Anglais 2</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -475,8 +475,8 @@
   </UE>
 
   <UE id="UE-26">
+		<nom>Communication 2</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Communication 2</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -491,8 +491,8 @@
   </UE>
 
   <UE id="UE-27">
+		<nom>Sécurité internet et réseau</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Sécurité internet et réseau</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -507,8 +507,8 @@
   </UE>
 
   <UE id="UE-28">
+		<nom>Fiabilité logicielle</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Fiabilité logicielle</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -523,8 +523,8 @@
   </UE>
 
   <UE id="UE-29">
+		<nom>Administration système et réseau</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Administration système et réseau</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -539,8 +539,8 @@
   </UE>
 
   <UE id="UE-30">
+		<nom>Méthodes de développement</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Méthodes de développement</nom>
     <nbCredits>3</nbCredits>
     <resume>
       <![CDATA[
@@ -555,8 +555,8 @@
   </UE>
 
   <UE id="UE-31">
+		<nom>Projet industriel de mise en application</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Projet industriel de mise en application</nom>
     <nbCredits>6</nbCredits>
     <resume>
       <![CDATA[
@@ -571,8 +571,8 @@
   </UE>
 
   <UE id="UE-32">
+		<nom>Stage en entreprise</nom>
 		<ref-responsable ref="ENS-1"/>
-    <nom>Stage en entreprise</nom>
     <nbCredits>24</nbCredits>
     <resume>
       <![CDATA[
@@ -587,8 +587,8 @@
   </UE>
 
   <parcours id="PARC-0">
+		<nom>Première année de tronc commun</nom>
     <ref-responsable ref="ENS-7"/>
-    <nom>Première année de tronc commun</nom>
     <description>
       <![CDATA[
         La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
@@ -646,8 +646,8 @@
   </parcours>
 
   <parcours id="PARC-1">
+		<nom>Fiabilité et sécurité informatique (FSI)</nom>
     <ref-responsable ref="ENS-9"/>
-    <nom>Fiabilité et sécurité informatique (FSI)</nom>
     <description>
       <![CDATA[
       La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.
@@ -679,10 +679,10 @@
       </bloc>
     </semestre>
   </parcours>
-	
+
   <parcours id="PARC-2">
+		<nom>Intégration de systèmes logiciels (ISL)</nom>
     <ref-responsable ref="ENS-8"/>
-    <nom>Intégration de systèmes logiciels (ISL)</nom>
     <description>
       <![CDATA[
       La formation donne les principes et techniques liés à la conception de systèmes informatiques dans un environnement ouvert et hétérogène.

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	
+
 	<!-- Elements de type complexe -->
 	<xs:element name="master" type="master"/>
 	<xs:element name="objet" type="objet" abstract="true"/>
@@ -10,7 +10,7 @@
 	<xs:element name="parcours" type="parcours" substitutionGroup="objet"/>
 	<xs:element name="semestre" type="semestre"/>
 	<xs:element name="bloc" type="bloc"/>
-	
+
 	<!-- Eléments de type simple -->
 	<xs:element name="nom" type="xs:string" />
 	<xs:element name="id" type="xs:string" />
@@ -24,7 +24,7 @@
 	<xs:element name="debouches" type="xs:string" />
 	<xs:element name="role" type="xs:string" />
 	<xs:element name="autres" type="xs:string" />
-	
+
 	<!-- Eléments de références -->
 	<xs:element name="ref-UE">
 		<xs:complexType>
@@ -45,9 +45,9 @@
 			</xs:simpleContent>
 		</xs:complexType>
 	</xs:element>
-	
+
 	<!-- Définition des types UE et UE luminy et UE saint jerome-->
-	<xs:complexType name="UE2">
+	<!--<xs:complexType name="UE2">
 				<xs:sequence>
 					<xs:element ref="ref-responsable" />
 					<xs:element ref="nom" />
@@ -73,7 +73,7 @@
 			</xs:restriction>
 		</xs:complexContent>
 	</xs:complexType>
-	
+
 	<xs:complexType name="UEstjerome">
 		<xs:complexContent>
 			<xs:restriction base="UE">
@@ -88,7 +88,7 @@
 				</xs:sequence>
 			</xs:restriction>
 		</xs:complexContent>
-	</xs:complexType>
+	</xs:complexType>-->
 
 <!-- Extension du type enseignant (inutilisé) -->
 	<xs:complexType name="personne">
@@ -108,7 +108,7 @@
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID"/>
 	</xs:complexType>
-	
+
 	<xs:complexType name="enseignant">
 		<xs:complexContent>
 			<xs:extension base="objet">
@@ -129,8 +129,11 @@
 					<xs:element ref="nbCredits" />
 					<xs:element ref="resume" />
 					<xs:element ref="plan" />
-					<xs:element ref="lieu" />
-					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded"/>
+					<xs:choice>
+						<xs:element name="lieu" type="xs:string" fixed="Saint-Jérôme" />
+						<xs:element name="lieu" type="xs:string" fixed="Luminy" />
+					</xs:choice>
+					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
@@ -141,12 +144,10 @@
 			<xs:extension base="objet">
 				<xs:sequence>
 					<xs:element ref="ref-responsable" />
-					<xs:element ref="nom" />
 					<xs:element ref="description" />
-					<xs:element ref="debouches" />
+					<xs:element ref="debouches" minOccurs="0" />
 					<xs:element ref="semestre" minOccurs="1" maxOccurs="unbounded" />
 				</xs:sequence>
-				<xs:attribute name="id" type="xs:ID" />
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
@@ -164,15 +165,11 @@
 		</xs:sequence>
 	</xs:complexType>
 
-<!-- Vrac pas nettoyé -->
 	<xs:complexType name="master">
 		<xs:sequence>
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="enseignant" />
-			<xs:choice>
-				<xs:element name="UE" minOccurs="1" maxOccurs="unbounded" type="UEluminy" />
-				<xs:element name="UE" minOccurs="1" maxOccurs="unbounded" type="UEjerome" />
-			</xs:choice>
-			<xs:element minOccurs="1" maxOccurs="unbounded" ref="parcours" />
+			<xs:element ref="enseignant" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element ref="UE" minOccurs="1" maxOccurs="unbounded" />
+			<xs:element ref="parcours" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
 
