@@ -7,13 +7,12 @@
     version="1"
     encoding="iso-8859-1"
     indent="yes"
-    xml-declaration="no"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
   />
 
   <xsl:template name="fiches_enseignants">
-    <xsl:param name="idEns"/>
+    <xsl:param name="idEns" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idEns}"><xsl:value-of select="nom"/></h3>
       <ul>
@@ -36,7 +35,7 @@
   </xsl:template>
 
   <xsl:template name="fiches_UE">
-    <xsl:param name="idUE"/>
+    <xsl:param name="idUE" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idUE}">Unités d'enseignement : <xsl:value-of select="nom"/></h3>
       <p><xsl:value-of select="resume"/></p>
@@ -58,7 +57,7 @@
   </xsl:template>
 
   <xsl:template name="fiches_parcours">
-    <xsl:param name="idParc"/>
+    <xsl:param name="idParc" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idParc}">Parcours : <xsl:value-of select="nom"/></h3>
       <p>

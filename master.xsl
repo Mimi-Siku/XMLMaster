@@ -11,11 +11,10 @@
 		version="1"
 		encoding="iso-8859-1"
 		indent="yes"
-		xml-declaration="no"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
 	/>
-
+	
 	<xsl:key
 		name="ueParInterv"
 		match="//UE"
@@ -51,7 +50,7 @@
 
 	<xsl:template name="pages-site">
 		<xsl:param name="page-name"/>
-		<xsl:document href="{$page-name}.html" method="xml" indent="yes" xml-declaration="no" encoding="iso-8859-1">
+		<xsl:document href="{$page-name}.html" method="xml" indent="yes" encoding="iso-8859-1">
 			<html>
 				<head>
 					<title>Master informatique Aix-Marseille Université</title>
