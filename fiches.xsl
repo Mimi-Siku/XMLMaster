@@ -1,18 +1,10 @@
 <xsl:stylesheet
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
   version="2.0">
 
-  <xsl:output
- 		name="general"
-    method="xml"
-    version="1.1"
-    encoding="iso-8859-1"
-    indent="yes"
-    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-  />
   <xsl:template name="fiches_enseignants">
-    <xsl:param name="idEns"/>
+    <xsl:param name="idEns" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idEns}"><xsl:value-of select="nom"/></h3>
       <ul>
@@ -35,7 +27,7 @@
   </xsl:template>
 
   <xsl:template name="fiches_UE">
-    <xsl:param name="idUE"/>
+    <xsl:param name="idUE" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idUE}">Unités d'enseignement : <xsl:value-of select="nom"/></h3>
       <p><xsl:value-of select="resume"/></p>
@@ -57,7 +49,7 @@
   </xsl:template>
 
   <xsl:template name="fiches_parcours">
-    <xsl:param name="idParc"/>
+    <xsl:param name="idParc" as="xs:string" required="yes"/>
     <html><body>
       <h3 id="{$idParc}">Parcours : <xsl:value-of select="nom"/></h3>
       <p>
@@ -79,7 +71,7 @@
           <ul>
             <li><b>Role : </b><xsl:value-of select="role"/></li>
             <xsl:for-each select="ref-UE">
-              <xsl:variable name="idUE" select="@ref"/>
+              <xsl:variable name="idUE" select="@ref" as="xs:string"/>
               <li><b>UE </b><a href="{$idUE}.html"><xsl:value-of select="id(@ref)/nom"/></a></li>
             </xsl:for-each>
           </ul>

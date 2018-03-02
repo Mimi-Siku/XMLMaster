@@ -1,5 +1,6 @@
 <xsl:stylesheet
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	version="2.0">
 
 	<xsl:include href="modeRef.xsl"/>
@@ -45,12 +46,12 @@
 			<xsl:with-param name="page-name">intervenants</xsl:with-param>
 		</xsl:call-template>
 		<xsl:call-template name="pages-site">
-			<xsl:with-param name="page-name">index</xsl:with-param>
+			<xsl:with-param name="page-name">inde</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 
 	<xsl:template name="pages-site">
-		<xsl:param name="page-name"/>
+		<xsl:param name="page-name" as="xs:string" required="yes" />
 		<xsl:result-document href="{$page-name}.html" format="general">
 			<html>
 				<head>
@@ -68,6 +69,9 @@
 						<xsl:when test="$page-name = 'index'">
 								<p>Bonjour</p>
 						</xsl:when>
+						<xsl:otherwise>
+							<p>I'm sorry but this page should not be called "<xsl:value-of select="$page-name"/>".</p>
+						</xsl:otherwise>
 					</xsl:choose>
 				</body>
 			</html>
