@@ -1,20 +1,20 @@
 <xsl:stylesheet
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	version="1.0">
+	version="2.0">
 
 	<xsl:include href="modeRef.xsl"/>
 	<xsl:include href="modeSimple.xsl"/>
 	<xsl:include href="fiches.xsl"/>
 
 	<xsl:output
-		method="xml"
-		version="1"
-		encoding="iso-8859-1"
-		indent="yes"
-		xml-declaration="no"
-		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-	/>
+ 		name="general"
+    method="xml"
+    version="1.1"
+    encoding="iso-8859-1"
+    indent="yes"
+    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+  />
 
 	<xsl:key
 		name="ueParInterv"
@@ -51,7 +51,7 @@
 
 	<xsl:template name="pages-site">
 		<xsl:param name="page-name"/>
-		<xsl:document href="{$page-name}.html" method="xml" indent="yes" xml-declaration="no" encoding="iso-8859-1">
+		<xsl:result-document href="{$page-name}.html" format="general">
 			<html>
 				<head>
 					<title>Master informatique Aix-Marseille Université</title>
@@ -71,7 +71,7 @@
 					</xsl:choose>
 				</body>
 			</html>
-		</xsl:document>
+		</xsl:result-document>
 	</xsl:template>
 
 	<xsl:template name="menu">

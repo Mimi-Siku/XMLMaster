@@ -1,13 +1,13 @@
 <xsl:stylesheet
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	version="1.0">
+	version="2.0">
 
-  <xsl:output
+	<xsl:output
+ 		name="general"
     method="xml"
-    version="1"
+    version="1.1"
     encoding="iso-8859-1"
     indent="yes"
-    xml-declaration="no"
     doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
     doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
   />
