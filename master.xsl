@@ -15,25 +15,25 @@
 		indent="yes"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-  />
+	/>
 
 	<xsl:key
 		name="ueParInterv"
 		match="//UE"
 		use="ref-responsable/@ref"
-		/>
+	/>
 
 	<xsl:key
 		name="parcParInterv"
 		match="//parcours"
 		use="ref-responsable/@ref"
-		/>
+	/>
 
 	<xsl:key
 		name="parcParUE"
 		match="//parcours"
 		use="semestre/bloc/ref-UE/@ref"
-		/>
+	/>
 
 	<xsl:template match="/">
 		<xsl:apply-templates select="//UE"/>
@@ -54,9 +54,7 @@
 		<xsl:param name="page-name" as="xs:string" required="yes" />
 		<xsl:result-document href="{$page-name}.html" format="general">
 			<html>
-				<head>
-					<title>Master informatique Aix-Marseille Université</title>
-				</head>
+				<xsl:call-template name="head"/>
 				<body>
 					<xsl:call-template name="menu"/>
 					<xsl:choose>
@@ -79,11 +77,18 @@
 	</xsl:template>
 
 	<xsl:template name="menu">
-		<ul>
-			<li><a href="index.html">Accueil</a></li>
-			<li><a href="unites.html">Unités d'enseignements</a></li>
-			<li><a href="intervenants.html">Intervenants</a></li>
+		<ul id="menu">
+			<li><a class="menuLink" href="index.html">Accueil</a></li>
+			<li><a class="menuLink" href="unites.html">Unités d'enseignements</a></li>
+			<li><a class="menuLink" href="intervenants.html">Intervenants</a></li>
 		</ul>
+	</xsl:template>
+
+	<xsl:template name="head">
+		<head>
+			<title>Master informatique Aix-Marseille Université</title>
+			<link rel="stylesheet" href="master.css" />
+		</head>
 	</xsl:template>
 
 </xsl:stylesheet>
