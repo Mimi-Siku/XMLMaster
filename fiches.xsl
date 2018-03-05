@@ -1,15 +1,7 @@
 <xsl:stylesheet
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  version="1.0">
-
-  <xsl:output
-    method="xml"
-    version="1"
-    encoding="iso-8859-1"
-    indent="yes"
-    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
-    doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-  />
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  version="2.0">
 
   <xsl:template name="fiches_enseignants">
     <xsl:param name="idEns" as="xs:string" required="yes"/>
@@ -78,8 +70,10 @@
         <p>
           <ul>
             <li><b>Role : </b><xsl:value-of select="role"/></li>
-            <xsl:variable name="idUE" select="ref-UE/@ref"/>
-            <li><b>UE </b><a href="{$idUE}.html"><xsl:value-of select="id(ref-UE/@ref)/nom"/></a></li>
+            <xsl:for-each select="ref-UE">
+              <xsl:variable name="idUE" select="@ref" as="xs:string"/>
+              <li><b>UE </b><a href="{$idUE}.html"><xsl:value-of select="id(@ref)/nom"/></a></li>
+            </xsl:for-each>
           </ul>
         </p>
       </xsl:for-each>

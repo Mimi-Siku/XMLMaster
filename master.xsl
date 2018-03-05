@@ -1,20 +1,22 @@
 <xsl:stylesheet
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	version="1.0">
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	version="2.0">
 
 	<xsl:include href="modeRef.xsl"/>
 	<xsl:include href="modeSimple.xsl"/>
 	<xsl:include href="fiches.xsl"/>
 
 	<xsl:output
+ 		name="general"
 		method="xml"
-		version="1"
+		version="1.1"
 		encoding="iso-8859-1"
 		indent="yes"
 		doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
 		doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
-	/>
-	
+  />
+
 	<xsl:key
 		name="ueParInterv"
 		match="//UE"
@@ -44,13 +46,13 @@
 			<xsl:with-param name="page-name">intervenants</xsl:with-param>
 		</xsl:call-template>
 		<xsl:call-template name="pages-site">
-			<xsl:with-param name="page-name">index</xsl:with-param>
+			<xsl:with-param name="page-name">inde</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 
 	<xsl:template name="pages-site">
-		<xsl:param name="page-name"/>
-		<xsl:document href="{$page-name}.html" method="xml" indent="yes" encoding="iso-8859-1">
+		<xsl:param name="page-name" as="xs:string" required="yes" />
+		<xsl:result-document href="{$page-name}.html" format="general">
 			<html>
 				<head>
 					<title>Master informatique Aix-Marseille Université</title>
@@ -67,10 +69,13 @@
 						<xsl:when test="$page-name = 'index'">
 								<p>Bonjour</p>
 						</xsl:when>
+						<xsl:otherwise>
+							<p>I'm sorry but this page should not be called "<xsl:value-of select="$page-name"/>".</p>
+						</xsl:otherwise>
 					</xsl:choose>
 				</body>
 			</html>
-		</xsl:document>
+		</xsl:result-document>
 	</xsl:template>
 
 	<xsl:template name="menu">
