@@ -10,11 +10,11 @@
 					<xsl:call-template name="head"/>
 					<body>
 						<xsl:call-template name="menu"/>
-						<xsl:call-template name="fiches_UE">
+						<div class="belowMenu"><xsl:call-template name="fiches_UE">
 							<xsl:with-param name="idUE">
 								<xsl:value-of select="@id"/>
 							</xsl:with-param>
-						</xsl:call-template>
+						</xsl:call-template></div>
 					</body>
 				</html>
 			</xsl:result-document>
@@ -28,11 +28,11 @@
 					<xsl:call-template name="head"/>
 					<body>
 						<xsl:call-template name="menu"/>
-						<xsl:call-template name="fiches_enseignants">
+						<div class="belowMenu"><xsl:call-template name="fiches_enseignants">
 							<xsl:with-param name="idEns">
 								<xsl:value-of select="@id"/>
 							</xsl:with-param>
-						</xsl:call-template>
+						</xsl:call-template></div>
 					</body>
 				</html>
 			</xsl:result-document>
@@ -46,11 +46,11 @@
 					<xsl:call-template name="head"/>
 					<body>
 						<xsl:call-template name="menu"/>
-						<xsl:call-template name="fiches_parcours">
+						<div class="belowMenu"><xsl:call-template name="fiches_parcours">
 							<xsl:with-param name="idParc">
 								<xsl:value-of select="@id"/>
 							</xsl:with-param>
-						</xsl:call-template>
+						</xsl:call-template></div>
 					</body>
 				</html>
 			</xsl:result-document>

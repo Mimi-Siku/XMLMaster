@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+    color: aquamarine;
+}
+
+div.belowMenu {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+/* menu */
+ul#menu {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background-color: #006600;
+    top: 0;
+    height: 50px;
+    width: 100%;
+}
+
+ul#menu li {
+    float: left;
+}
+
+li a.menuLink {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 16px;
+    text-decoration: none;
+}
+
+li a.menuLink:hover {
+    background-color: darkolivegreen;
+}
+
+/* listes classiques */
+ul.classic {
+  list-style-type: none;
+
+}
+
+li a.classicLink {
+  border-radius: 25px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgoldenrod;
+  color: darkgoldenrod;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding:5px;
+  margin: 5px;
+}
+
+li a.classicLink:hover {
+  list-style-type: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: darkgoldenrod;
+  color: coral;
+}
+
+ul.info {
+
+}

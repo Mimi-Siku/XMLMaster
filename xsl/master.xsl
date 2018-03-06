@@ -46,7 +46,7 @@
 			<xsl:with-param name="page-name">intervenants</xsl:with-param>
 		</xsl:call-template>
 		<xsl:call-template name="pages-site">
-			<xsl:with-param name="page-name">inde</xsl:with-param>
+			<xsl:with-param name="page-name">index</xsl:with-param>
 		</xsl:call-template>
 	</xsl:template>
 
@@ -59,16 +59,16 @@
 					<xsl:call-template name="menu"/>
 					<xsl:choose>
 						<xsl:when test="$page-name = 'unites'">
-								<xsl:apply-templates select="//UE" mode="ref"/>
+								<div class="belowMenu"><xsl:apply-templates select="//UE" mode="ref"/></div>
 						</xsl:when>
 						<xsl:when test="$page-name = 'intervenants'">
-								<xsl:apply-templates select="//enseignant" mode="ref"/>
+								<div class="belowMenu"><xsl:apply-templates select="//enseignant" mode="ref"/></div>
 						</xsl:when>
 						<xsl:when test="$page-name = 'index'">
-								<p>Bonjour</p>
+								<div class="belowMenu">Bonjour ! <br/> Vous voulez des renseignements sur le master informatique de l'université d'Aix-Marseille ? Vous voilà au bon endroit !</div>
 						</xsl:when>
 						<xsl:otherwise>
-							<p>I'm sorry but this page should not be called "<xsl:value-of select="$page-name"/>".</p>
+							<div class="belowMenu">I'm sorry but this page should not be called "<xsl:value-of select="$page-name"/>".</div>
 						</xsl:otherwise>
 					</xsl:choose>
 				</body>

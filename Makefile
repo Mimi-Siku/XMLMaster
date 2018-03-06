@@ -8,7 +8,7 @@ xsd:
 
 web:
 	mkdir -p www
-	java -cp saxon9/saxon9he.jar -xsl:xsl/master.xsl master.xml
+	java -jar saxon9/saxon9he.jar -xsl:xsl/master.xsl master.xml -o:www/master.html
 
 tidy:
 	tidy -im -asxhtml -indent www/*.html
