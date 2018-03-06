@@ -2,8 +2,8 @@
 
 <!ELEMENT master (enseignant+, UE+, parcours+)>
 <!ELEMENT enseignant (nom, adrElec, adrSite)>
-<!ELEMENT UE (ref-responsable, nom, nbCredits, resume, plan, lieu)>
-<!ELEMENT parcours (ref-responsable, nom, description, debouches?, semestre+)>
+<!ELEMENT UE (nom, ref-responsable, nbCredits, resume, plan, lieu)>
+<!ELEMENT parcours (nom, ref-responsable, description, debouches?, semestre+)>
 <!ELEMENT semestre (bloc+)>
 <!ELEMENT bloc (role, ref-UE+)>
 

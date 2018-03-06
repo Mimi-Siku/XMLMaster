@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE master SYSTEM "master.dtd">
 
-<master
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="master.xsd"
-		>
+<master>
 
 	<enseignant id="ENS-0">
 		<nom>Roland AGOPIAN</nom>
