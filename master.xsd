@@ -2,7 +2,7 @@
 
 <xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-	<!-- Elements de type complexe -->
+	<!-- Eléments de type complexe -->
 	<xs:element name="master" type="master">
 		<xs:unique name="ENS">
 			<xs:selector xpath="./enseignant"/>
@@ -67,50 +67,6 @@
 		</xs:complexType>
 	</xs:element>
 
-	<!-- Définition des types UE et UE luminy et UE saint jerome-->
-	<!--<xs:complexType name="UE2">
-				<xs:sequence>
-					<xs:element ref="ref-responsable" />
-					<xs:element ref="nom" />
-					<xs:element ref="nbCredits" />
-					<xs:element ref="resume" />
-					<xs:element ref="plan" />
-					<xs:element ref="lieu" />
-					<xs:element ref="autres" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="UEluminy">
-		<xs:complexContent>
-			<xs:restriction base="UE2">
-				<xs:sequence>
-					<xs:element ref="ref-responsable" />
-					<xs:element ref="nom" />
-					<xs:element ref="nbCredits" />
-					<xs:element ref="resume" />
-					<xs:element ref="plan" />
-					<xs:element name="lieu" type="xs:string" fixed="Luminy"/>
-					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
-				</xs:sequence>
-			</xs:restriction>
-		</xs:complexContent>
-	</xs:complexType>
-
-	<xs:complexType name="UEstjerome">
-		<xs:complexContent>
-			<xs:restriction base="UE">
-				<xs:sequence>
-					<xs:element ref="ref-responsable" />
-					<xs:element ref="nom" />
-					<xs:element ref="nbCredits" />
-					<xs:element ref="resume" />
-					<xs:element ref="plan" />
-					<xs:element name="lieu" type="xs:string" fixed="Saint-Jérôme"/>
-					<xs:element minOccurs="0" maxOccurs="unbounded" ref="autres"/>
-				</xs:sequence>
-			</xs:restriction>
-		</xs:complexContent>
-	</xs:complexType>-->
-
 <!-- Extension du type enseignant (inutilisé) -->
 	<xs:complexType name="personne">
 		<xs:complexContent>
@@ -122,11 +78,11 @@
 		</xs:complexContent>
 	</xs:complexType>
 
+<!-- Restriction du type lieu aux valeurs Saint-Jérôme et Luminy -->
     <xs:simpleType name="lieu">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Saint-Jérôme"/>
             <xs:enumeration value="Luminy"/>
-            <xs:enumeration value="BMW"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -171,7 +127,7 @@
 				<xs:sequence>
 					<xs:element ref="ref-responsable" />
 					<xs:element ref="description" />
-					<xs:element ref="debouches" minOccurs="0" />
+					<xs:element ref="debouches" minOccurs="0" maxOccurs="1" />
 					<xs:element ref="semestre" minOccurs="1" maxOccurs="unbounded" />
 				</xs:sequence>
 			</xs:extension>

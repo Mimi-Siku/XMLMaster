@@ -14,8 +14,10 @@ tidy:
 	tidy -im -asxhtml -indent www/*.html
 
 xq:
-	java -cp saxon9/saxon9he.jar net.sf.saxon.Query "-q:xq.txt"
+	java -cp saxon9/saxon9he.jar net.sf.saxon.Query "-q:xq.txt" -o:www/xq.html
 
 java:
-	mkdir -p java
-	java -jar master.jar
+	java -classpath java/MasterUE.class
+	java MasterUE
+
+.PHONY :
