@@ -8,8 +8,20 @@
 			<xs:selector xpath="./enseignant"/>
 			<xs:field xpath="@id"/>
 		</xs:unique>
-		<xs:keyref name="ref.ENS" refer="ENS">
+		<xs:unique name="UE">
+			<xs:selector xpath="./UE"/>
+			<xs:field xpath="@id"/>
+		</xs:unique>
+		<xs:keyref name="ref.ENS.UE" refer="ENS">
 			<xs:selector xpath="./UE/ref-responsable"/>
+			<xs:field xpath="@ref"/>
+		</xs:keyref>
+		<xs:keyref name="ref.ENS.PARC" refer="ENS">
+			<xs:selector xpath=".//parcours/ref-responsable"/>
+			<xs:field xpath="@ref"/>
+		</xs:keyref>
+		<xs:keyref name="ref.UE.PARC" refer="UE">
+			<xs:selector xpath=".//bloc/ref-UE"/>
 			<xs:field xpath="@ref"/>
 		</xs:keyref>
 	</xs:element>
@@ -117,7 +129,7 @@
             <xs:enumeration value="BMW"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
 	<!-- Main complex types -->
 	<xs:complexType name="objet">
 		<xs:sequence>
@@ -186,5 +198,5 @@
 			<xs:element ref="parcours" minOccurs="1" maxOccurs="unbounded" />
 		</xs:sequence>
 	</xs:complexType>
-    
+
 </xs:schema>

@@ -15,4 +15,10 @@
 		</ul>
 	</xsl:template>
 
+	<xsl:template match="//parcours" mode="ref">
+		<ul class="classic">
+			<li><a class="classicLink" href="{@id}.html"><xsl:value-of select="nom"/></a></li>
+		</ul>
+	</xsl:template>
+
 </xsl:stylesheet>

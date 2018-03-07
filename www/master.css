@@ -1,13 +1,18 @@
 body {
-    background-color: black;
+    background-color: darkslategrey;
     color: aquamarine;
 }
 
+div.decalage {
+  padding-left: 50px;
+}
+
+/* menu */
 div.belowMenu {
   margin-top: 100px;
   margin-left: 50px;
 }
-/* menu */
+
 ul#menu {
     position: fixed;
     list-style-type: none;
@@ -39,30 +44,34 @@ li a.menuLink:hover {
 /* listes classiques */
 ul.classic {
   list-style-type: none;
-
+  padding: 10px;
 }
 
 li a.classicLink {
   border-radius: 25px;
   border-width: 1px;
   border-style: solid;
-  border-color: darkgoldenrod;
-  color: darkgoldenrod;
-  display: block;
+  border-color: aquamarine;
+  color: aquamarine;
   text-align: center;
   text-decoration: none;
-  padding:5px;
-  margin: 5px;
+  padding:10px;
 }
 
 li a.classicLink:hover {
   list-style-type: none;
   border-width: 1px;
   border-style: solid;
-  border-color: darkgoldenrod;
-  color: coral;
+  border-color: lawnGreen;
+  color: lawnGreen;
 }
 
-ul.info {
+/* listes informatives */
+li a.infoLink{
+  color: lightSeaGreen ;
+  text-decoration: none;
+}
 
+li a.infoLink:hover{
+  color: lawnGreen;
 }

@@ -59,14 +59,14 @@
     <nom>Génie Logiciel</nom>
 		<ref-responsable ref="ENS-1"/>
     <nbCredits>6</nbCredits>
-    <resume>
-      <![CDATA[
-        Processus logiciel
-        Gestion de projet
-        Spécification et conception (artefact : notation UML)
-        Design patterns
-      ]]>
-    </resume>
+		<resume>
+			<![CDATA[
+	      Processus logiciel
+	      Gestion de projet
+	      Spécification et conception (artefact : notation UML)
+	      Design patterns
+			]]>
+		</resume>
     <plan>20h/20h/20h</plan>
     <lieu>Luminy</lieu>
   </UE>

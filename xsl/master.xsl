@@ -9,7 +9,7 @@
 
 	<xsl:output
  		name="general"
-		method="xml"
+		method="xhtml"
 		version="1.1"
 		encoding="iso-8859-1"
 		indent="yes"
@@ -48,6 +48,9 @@
 		<xsl:call-template name="pages-site">
 			<xsl:with-param name="page-name">index</xsl:with-param>
 		</xsl:call-template>
+		<xsl:call-template name="pages-site">
+			<xsl:with-param name="page-name">parcours</xsl:with-param>
+		</xsl:call-template>
 	</xsl:template>
 
 	<xsl:template name="pages-site">
@@ -58,11 +61,23 @@
 				<body>
 					<xsl:call-template name="menu"/>
 					<xsl:choose>
+						<xsl:when test="$page-name = 'parcours'">
+								<div class="belowMenu">
+									<h1>Parcours</h1>
+									<xsl:apply-templates select="//parcours" mode="ref"/>
+								</div>
+						</xsl:when>
 						<xsl:when test="$page-name = 'unites'">
-								<div class="belowMenu"><xsl:apply-templates select="//UE" mode="ref"/></div>
+								<div class="belowMenu">
+									<h1>Unités d'enseignement</h1>
+									<xsl:apply-templates select="//UE" mode="ref"/>
+								</div>
 						</xsl:when>
 						<xsl:when test="$page-name = 'intervenants'">
-								<div class="belowMenu"><xsl:apply-templates select="//enseignant" mode="ref"/></div>
+								<div class="belowMenu">
+									<h1>Intervenants</h1>
+									<xsl:apply-templates select="//enseignant" mode="ref"/>
+								</div>
 						</xsl:when>
 						<xsl:when test="$page-name = 'index'">
 								<div class="belowMenu">Bonjour ! <br/> Vous voulez des renseignements sur le master informatique de l'université d'Aix-Marseille ? Vous voilà au bon endroit !</div>
@@ -81,6 +96,7 @@
 			<li><a class="menuLink" href="index.html">Accueil</a></li>
 			<li><a class="menuLink" href="unites.html">Unités d'enseignements</a></li>
 			<li><a class="menuLink" href="intervenants.html">Intervenants</a></li>
+			<li><a class="menuLink" href="parcours.html">Parcours</a></li>
 		</ul>
 	</xsl:template>
 
